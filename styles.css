@@ -466,4 +466,155 @@ a, button {
     .nav-links.active {
         display: flex;
     }
+}/* Cores principais */
+:root {
+    --bege-fundo: #e9e4d7; /* Bege escuro para o fundo */
+    --verde-musgo-claro: #687a61; /* Verde musgo claro */
+    --verde-musgo-medio: #4d6046; /* Verde musgo médio */
+    --verde-musgo-escuro: #2f3e2e; /* Verde musgo escuro */
+    --texto: #ffffff; /* Texto branco fora de containers/cards */
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte básica para o corpo */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bege-fundo);
+    color: var(--texto); /* Texto fora dos containers é branco */
+}
+
+/* Fontes para títulos */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Fonte estilosa para títulos */
+    color: var(--verde-musgo-escuro);
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--verde-musgo-medio);
+    border-bottom: 2px solid var(--verde-musgo-escuro);
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--bege-fundo);
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--texto);
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 40px 20px;
+    background-color: var(--verde-musgo-claro);
+    color: var(--texto);
+    text-align: center;
+}
+
+.sobre p, .sobre h2 {
+    color: var(--texto); /* Texto branco para contraste */
+}
+
+.sobre h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.sobre-equipe {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que os itens se ajustem em telas pequenas */
+}
+
+.membro {
+    text-align: center;
+    max-width: 250px;
+    padding: 20px;
+    background-color: var(--bege-fundo);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membro img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.membro h3 {
+    font-size: 22px;
+    color: var(--verde-musgo-escuro);
+}
+
+.membro p {
+    font-size: 16px;
+    color: var(--verde-musgo-medio);
+}
+
+/* Rodapé */
+.footer {
+    background-color: var(--verde-musgo-escuro);
+    color: var(--bege-fundo);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: var(--verde-musgo-claro);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .sobre-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .membro {
+        width: 90%; /* Ajusta o tamanho para caber na tela menor */
+    }
 }
